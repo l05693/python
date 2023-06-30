@@ -1,0 +1,23 @@
+#hash会随机生成的一串十进制数字
+#md5会随机生成一串十六进制字符串
+md5 搭配了.hexdigest() 方法才生成16进制字符串
+md5 搭配 digest()方法生成的是二进制
+
+Hash，一般翻译做“散列”，也有直接音译为“哈希”的，就是把任意长度的输入（又叫做预映射， pre-image），通过散列算法，变换成固定长度的输出，该输出就是散列值。
+
+md5是hashlib模块里的一个方法，是用来做加密算法的，注意他是不能解密的。
+
+示例代码：
+
+print(hash("http://www.dafufoto.com"))
+from hashlib import md5
+print(md5("http://www.dafufoto.com".encode("utf-8")).hexdigest())
+#hash会随机生成的一串十进制数字
+#md5会随机生成一串十六进制字符串
+# hash会随机的生成，每次生成的值都不一样，而md5只要里面传的参数是固定的，那么值也就是固定的
+
+output:
+-6311919687356759433
+0c82ad0039b921e2f2e6726146c727f1
+b"\x0c\x82\xad\x009\xb9!\xe2\xf2\xe6raF\xc7'\xf1"
+
