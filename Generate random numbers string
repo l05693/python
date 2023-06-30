@@ -1,0 +1,28 @@
+generate numbers
+
+- map 用法
+map(function,iterable)
+
+numbers=map(str,range(10))
+print(''.join(numbers))
+
+> 0123456789
+
+another way
+
+numbers=[str(n) for n in range(10)]
+print(''.join(numbers))
+
+
+random generate numbers
+
+import random
+n=20 
+num = ''.join(
+    str(random.choice(range(n)))  for _ in range(n)
+)
+print(num)
+
+# 起到的只是控制循环此数的作用，_  上述共循环n次
+
+
